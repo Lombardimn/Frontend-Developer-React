@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "pregunta": "¿Estás interesado en aprender React?",
+        "opciones": ["Si", "No", "Solo vine a chusmear"]
+    },
+    {
+        "id": 2,
+        "pregunta": "¿Conoces sobre los fundamentos de la programación?",
+        "opciones": ["Si", "No", "Tengo algo de práctica"]
+    },
+    {
+        "id": 3,
+        "pregunta": "Con cuántos trabajado con los Frameworks de Frontend?",
+        "opciones": ["1", "2", "Mas de 2"]
+    },
+    {
+        "id": 4,
+        "pregunta": "Dónde escuchaste de nosotros?",
+        "opciones": ["Instagram", "X", "Youtube", "Twitch", "Facebook", "Otros"]
+    }
+]

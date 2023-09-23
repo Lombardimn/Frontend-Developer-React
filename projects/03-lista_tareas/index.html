@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Lista de Tareas</title>
+</head>
+
+<body>
+    <h1>Lista de Tareas</h1>
+    <section class="content-toggle">
+        <div class="toggleWrapper">
+            <input type="checkbox" class="dn" id="dn">
+            <label for="dn" class="toggle">
+                <span class="toggle__handler">
+                    <span class="crater crater--1"></span>
+                    <span class="crater crater--2"></span>
+                    <span class="crater crater--3"></span>
+                </span>
+                <span class="star star--1"></span>
+                <span class="star star--2"></span>
+                <span class="star star--3"></span>
+                <span class="star star--4"></span>
+                <span class="star star--5"></span>
+                <span class="star star--6"></span>
+            </label>
+        </div>
+    </section>
+    <section class="container">
+        <input type="text" id="newTask" placeholder="Ingrese una nueva tarea">
+        <button onclick="addTask()" id="addTask">Agregar</button>
+    <div class="box-button">
+        <button onclick="" id="filterComplete">Completadas</button>
+        <button onclick="" id="filterPending">Pendientes</button>
+    </div>
+    </section>
+    <section class="container-list">
+        <ul id="listTask" class="listTask"></ul>
+    </section>
+    <script src="assets/main.js"></script>
+</body>
+
+</html>

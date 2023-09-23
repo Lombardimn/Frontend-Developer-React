@@ -1,0 +1,276 @@
+/* Estructa */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+:root{
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #4FAEA5;
+
+    --shadow-dropmd: drop-shadow(0px 28px 11px rgba(255, 255, 255, 0))
+                    drop-shadow(0px 16px 10px rgba(255, 255, 255, 0.03)) 
+                    drop-shadow(0px 7px 7px rgba(255, 255, 255, 0.05))
+                    drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.06));
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+h1,
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 6rem; /* 60px */
+}
+
+h2 {
+    font-size: 4rem; /* 40px */
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+img {
+    display: block;
+    width: 100%;
+    filter: var(--shadow-dropmd);
+}
+
+
+/* Header */
+
+.header {
+    padding: 1rem;
+}
+
+.title {
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 0.2rem;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.span-l1 {
+    display: block;
+    font-size: 4.8rem;
+    margin-bottom: -0.2em;
+}
+
+.span-l2 {
+    font-size: 6rem;
+}
+
+.border {
+    background-color: var(--main-color);
+    width: 80%;
+    height: .5rem;
+    margin: auto;
+}
+
+/* Content */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+}
+
+.info-personal,
+.skills,
+.footer {
+    padding: 2rem 4.8rem;
+}
+
+.subtitle {
+    text-align: left;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box-img {
+    width: 30rem;
+    height: 30rem;
+
+}
+
+.box-img .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.global-p {
+    opacity: 1;
+    font-weight: 500;
+}
+
+.global-span {
+    color: var(--main-color);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.box-skills {
+    display: grid;
+    grid-gap: 2rem 1rem;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.box-skills li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-p {
+    margin: auto;
+}
+
+.skills-border {
+    margin: auto;
+    width: 80%;
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--second-bg-color);
+    border-top: .5rem solid var(--main-color);
+    padding-bottom: 3.9rem;
+    height: 100%;
+}
+
+.box-refence {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.footer-p {
+    margin-top: .7rem;
+    font-size: 1.6rem;
+}
+
+
+@media only screen and (min-width: 600px){
+    .border {
+        width: 90%;
+    }
+
+    .skills-border {
+        width: 50%;
+    }
+
+    .box-skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .box-refence {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-p {
+        margin: auto;
+        padding-top: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .info-personal,
+    .skills,
+    .footer {
+        padding: 2rem 8rem;
+    }
+
+    .box-img {
+        width: 60rem;
+        height: 60rem;
+    
+    }
+
+    .span-l1{
+        font-size: 5.6rem;
+    }
+
+    .span-l2{
+        font-size: 6.8rem;
+    }
+
+    .subtitle {
+        font-size: 4.8rem;
+    }
+
+    .box-text p {
+        font-size: 3.2rem;
+    }
+
+    p {
+        font-size: 2.4rem;
+    }
+
+    .box-skills li {
+        font-size: 2.4rem;
+    }
+
+    .footer-p{
+        font-size: 2.4rem;
+    }
+}
