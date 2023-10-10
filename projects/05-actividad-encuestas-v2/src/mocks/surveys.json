@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "title": "Encuesta de Satisfacción",
+        "description": "Por favor, tómese un momento para responder a nuestras preguntas de satisfacción.",
+        "questions": [
+            {
+                "id": 1,
+                "question": "¿Cómo calificaría nuestro servicio?",
+                "options": [
+                    {
+                        "id": 1,
+                        "option": "Excelente"
+                    },
+                    {
+                        "id": 2,
+                        "option": "Bueno"
+                    },
+                    {
+                        "id": 3,
+                        "option": "Regular"
+                    },
+                    {
+                        "id": 4,
+                        "option": "Malo"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "question": "¿Qué podemos mejorar?",
+                "options": [
+                    {
+                        "id": 5,
+                        "option": "Atención al cliente"
+                    },
+                    {
+                        "id": 6,
+                        "option": "Tiempo de entrega"
+                    },
+                    {
+                        "id": 7,
+                        "option": "Variedad de productos"
+                    },
+                    {
+                        "id": 8,
+                        "option": "Calidad de productos"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Encuesta de Productos",
+        "description": "Ayúdenos a mejorar nuestros productos completando esta encuesta.",
+        "questions": [
+            {
+                "id": 3,
+                "question": "¿Cuál es su producto favorito?",
+                "options": [
+                    {
+                        "id": 9,
+                        "option": "Producto A"
+                    },
+                    {
+                        "id": 10,
+                        "option": "Producto B"
+                    },
+                    {
+                        "id": 11,
+                        "option": "Producto C"
+                    },
+                    {
+                        "id": 12,
+                        "option": "Producto D"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "question": "¿Cómo podemos mejorar nuestro servicio al cliente?",
+                "options": [
+                    {
+                        "id": 13,
+                        "option": "Mayor disponibilidad de atención"
+                    },
+                    {
+                        "id": 14,
+                        "option": "Más opciones de contacto"
+                    },
+                    {
+                        "id": 15,
+                        "option": "Respuestas más rápidas"
+                    },
+                    {
+                        "id": 16,
+                        "option": "Entrenamiento al personal"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,41 @@
+/*Estilosparaelmenúdenavegación*/
+.logo {
+    margin: 0;
+    padding: 0;
+}
+
+.logo a {
+    color: #f9f9f9;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #007bff7c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+.navbar-ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.navbar-li:nth-child(2) {
+    margin-left: 24px;
+}
+
+.navbar-a {
+    font-size: 18px;
+}
+
+.navbar-a:hover {
+    text-decoration: none;
+    color: #ff7b00;
+}
+
