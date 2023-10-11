@@ -16,6 +16,17 @@ function App() {
 
   const [listQuestions, setListQuestion] = useState(surveys)
 
+  const addQuestions = (newquestion) => {
+    newquestion.id = listQuestions.length + 1
+    setListQuestion([...listQuestions, newquestion])
+  }
+
+  // const answerSurvey = (id, responses ) => {
+  //   const survey = listQuestions.find(
+  //     sur => sur.id === parseInt(id))
+  //     survey.responses = [responses]
+  // }
+
   return (
     <BrowserRouter>
       <Navbar></Navbar>
@@ -26,7 +37,7 @@ function App() {
         />
         <Route 
           path='/survey/create' 
-          element= {<CreateQuestion ></CreateQuestion>} 
+          element= {<CreateQuestion addQuestions={addQuestions} />} 
         />
         <Route 
           path='/survey/:id' 

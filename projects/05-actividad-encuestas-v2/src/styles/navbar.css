@@ -13,11 +13,12 @@
 }
 
 .navbar {
-    background-color: #007bff7c;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 32px;
+    background-color: #007bff2d;
+    border-radius: 8px;
 }
 
 .navbar-ul {
@@ -32,6 +33,7 @@
 
 .navbar-a {
     font-size: 18px;
+    font-weight: 700;
 }
 
 .navbar-a:hover {
