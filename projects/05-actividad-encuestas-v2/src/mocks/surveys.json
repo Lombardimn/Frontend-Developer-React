@@ -1,50 +1,50 @@
 [
     {
         "id": 1,
-        "title": "Encuesta de Satisfacción",
-        "description": "Por favor, tómese un momento para responder a nuestras preguntas de satisfacción.",
-        "questions": [
+        "titulo": "Encuesta de Satisfacción",
+        "descripcion": "Por favor, tómese un momento para responder a nuestras preguntas de satisfacción.",
+        "preguntas": [
             {
                 "id": 1,
-                "question": "¿Cómo calificaría nuestro servicio?",
-                "options": [
+                "pregunta": "¿Cómo calificaría nuestro servicio?",
+                "opciones": [
                     {
                         "id": 1,
-                        "option": "Excelente"
+                        "texto": "Excelente"
                     },
                     {
                         "id": 2,
-                        "option": "Bueno"
+                        "texto": "Bueno"
                     },
                     {
                         "id": 3,
-                        "option": "Regular"
+                        "texto": "Regular"
                     },
                     {
                         "id": 4,
-                        "option": "Malo"
+                        "texto": "Malo"
                     }
                 ]
             },
             {
                 "id": 2,
-                "question": "¿Qué podemos mejorar?",
-                "options": [
+                "pregunta": "¿Qué podemos mejorar?",
+                "opciones": [
                     {
                         "id": 5,
-                        "option": "Atención al cliente"
+                        "texto": "Atención al cliente"
                     },
                     {
                         "id": 6,
-                        "option": "Tiempo de entrega"
+                        "texto": "Tiempo de entrega"
                     },
                     {
                         "id": 7,
-                        "option": "Variedad de productos"
+                        "texto": "Variedad de productos"
                     },
                     {
                         "id": 8,
-                        "option": "Calidad de productos"
+                        "texto": "Calidad de productos"
                     }
                 ]
             }
@@ -52,50 +52,50 @@
     },
     {
         "id": 2,
-        "title": "Encuesta de Productos",
-        "description": "Ayúdenos a mejorar nuestros productos completando esta encuesta.",
-        "questions": [
+        "titulo": "Encuesta de Productos",
+        "descripcion": "Ayúdenos a mejorar nuestros productos completando esta encuesta.",
+        "preguntas": [
             {
                 "id": 3,
-                "question": "¿Cuál es su producto favorito?",
-                "options": [
+                "pregunta": "¿Cuál es su producto favorito?",
+                "opciones": [
                     {
                         "id": 9,
-                        "option": "Producto A"
+                        "texto": "Producto A"
                     },
                     {
                         "id": 10,
-                        "option": "Producto B"
+                        "texto": "Producto B"
                     },
                     {
                         "id": 11,
-                        "option": "Producto C"
+                        "texto": "Producto C"
                     },
                     {
                         "id": 12,
-                        "option": "Producto D"
+                        "texto": "Producto D"
                     }
                 ]
             },
             {
                 "id": 4,
-                "question": "¿Cómo podemos mejorar nuestro servicio al cliente?",
-                "options": [
+                "pregunta": "¿Cómo podemos mejorar nuestro servicio al cliente?",
+                "opciones": [
                     {
                         "id": 13,
-                        "option": "Mayor disponibilidad de atención"
+                        "texto": "Mayor disponibilidad de atención"
                     },
                     {
                         "id": 14,
-                        "option": "Más opciones de contacto"
+                        "texto": "Más opciones de contacto"
                     },
                     {
                         "id": 15,
-                        "option": "Respuestas más rápidas"
+                        "texto": "Respuestas más rápidas"
                     },
                     {
                         "id": 16,
-                        "option": "Entrenamiento al personal"
+                        "texto": "Entrenamiento al personal"
                     }
                 ]
             }

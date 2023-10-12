@@ -1,14 +1,15 @@
 import { useParams, Link } from "react-router-dom"
-import '../styles/survey.css'
 import { useState } from "react";
 
+import '../styles/survey.css'
+
 // eslint-disable-next-line react/prop-types
-export function Survey({ listQuestions }) {
+export function Survey({ mappedSurveys }) {
     const { id } = useParams();
 
     // eslint-disable-next-line react/prop-types
-    const survey = listQuestions.find(
-        (ques) => ques.id === parseInt(id)
+    const survey = mappedSurveys.find(
+        (ques) => ques.idSurvey === parseInt(id)
     );
 
     const [selectedColors, setSelectedColors] = useState({})
@@ -59,7 +60,7 @@ export function Survey({ listQuestions }) {
                                     survey.questions.map(
                                         (question) => (
                                             <>
-                                                <p key={question.id}>
+                                                <p key={question.idQuestion}>
                                                     {question.question}
                                                 </p>
                                                 <ul className="survey-box">
@@ -71,7 +72,7 @@ export function Survey({ listQuestions }) {
                                                         className="survey-svg"
                                                     >
                                                         <path
-                                                            fill={selectedColors[question.id] ? selectedColors[question.id]: "currentColor"}
+                                                            fill={selectedColors[question.idQuestion] ? selectedColors[question.idQuestion]: "currentColor"}
                                                             d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4l8-8l-1.41-1.42Z"
                                                         />
                                                     </svg>
@@ -80,14 +81,14 @@ export function Survey({ listQuestions }) {
                                                             (option) => (
                                                                 <li
                                                                     className="survey-question"
-                                                                    key={option.id}
+                                                                    key={option.idOption}
                                                                 >
                                                                     <input
                                                                         type="radio"
-                                                                        id={`check${question.id}-${option.id}`}
-                                                                        name={`group-${question.id}`}
+                                                                        id={`check${question.idQuestion}-${option.idOption}`}
+                                                                        name={`group-${question.idQuestion}`}
                                                                         className="survey-input"
-                                                                        onChange={() => handleColorChange(question.id, '#009614')}
+                                                                        onChange={() => handleColorChange(question.idQuestion, '#009614')}
                                                                     />
                                                                     <p>{option.option}</p>
                                                                 </li>

@@ -1,3 +1,51 @@
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 60ch;
+}
+
+label {
+    margin-top: 8px;
+}
+
+select {
+    width: 25ch;
+}
+
+.form-newmodal {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    background-color: #6666668f;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.form-input {
+    width: 20ch;
+}
+
+button {
+    width: 150px;
+}
+
+.form-clear{
+    background-color: #66666627;
+}
+
+.form-button {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 32px;
+}
+
 span {
     display: block;
     color: tomato;

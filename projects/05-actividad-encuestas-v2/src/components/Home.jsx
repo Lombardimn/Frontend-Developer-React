@@ -2,29 +2,45 @@ import { Link } from "react-router-dom";
 import '../styles/home.css'
 
 // eslint-disable-next-line react/prop-types
-export function Home ({listQuestions}) {
+export function Home ({mappedSurveys}, hasSurvey) {
     return (
         <section>
             <h2>Encuestas Disponibles</h2>
             {
-                // eslint-disable-next-line react/prop-types
-                listQuestions.map( question => (
-                    <Link key={question.id} className="question-a" to={`/survey/${question.id}`}>
-                        <div 
-                            className="question-container"
-                            // key={question.id}
-                        >
+                hasSurvey
+                    ? (
+                        // eslint-disable-next-line react/prop-types
+                        mappedSurveys.map( survey => (
+                            <Link 
+                                key={survey.idSurvey} 
+                                className="question-a" 
+                                to={`/survey/${survey.idSurvey}`}
+                            >
+                                <div className="question-container">
+                                    <article className="question-item">
+                                        <h2 className="question-title">
+                                            {survey.title}
+                                        </h2>
+                                        <p className="question-description">
+                                            {survey.description}
+                                        </p>
+                                    </article>
+                                </div>
+                            </Link>
+                        ))
+                    )
+                    : (
+                        <div className="question-container">
                             <article className="question-item">
                                 <h2 className="question-title">
-                                    {question.title}
+                                    Sin datos de Título
                                 </h2>
                                 <p className="question-description">
-                                    {question.description}
+                                    Sin datos de Descripción
                                 </p>
                             </article>
                         </div>
-                    </Link>
-                ))
+                    )
             }
         </section>
     )

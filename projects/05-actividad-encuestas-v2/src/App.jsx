@@ -1,47 +1,46 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useSurvey } from "./hooks/useSurvey";
+
 
 import { Navbar } from './components/Navbar'
 import { Home } from './components/Home'
 import { CreateQuestion } from './components/CreateQuestion'
 import { Survey } from './components/Survey'
 import { NotFound } from './components/NotFound'
+import { Prueba } from './components/prueba'
 
-import surveys from './mocks/surveys.json'
 import './App.css'
 
 
 
 function App() {
-
-  const [listQuestions, setListQuestion] = useState(surveys)
-
-  const addQuestions = (newquestion) => {
-    newquestion.id = listQuestions.length + 1
-    setListQuestion([...listQuestions, newquestion])
-  }
-
-  // const answerSurvey = (id, responses ) => {
-  //   const survey = listQuestions.find(
-  //     sur => sur.id === parseInt(id))
-  //     survey.responses = [responses]
-  // }
-
+  const  { surveys: mappedSurveys, hasSurvey } = useSurvey()
   return (
     <BrowserRouter>
       <Navbar></Navbar>
       <Routes>
         <Route
           path='/'
-          element={ <Home listQuestions={listQuestions} /> }
+          element={<Home 
+            mappedSurveys={mappedSurveys}
+            hasSurvey={hasSurvey} 
+          /> }
         />
         <Route 
           path='/survey/create' 
-          element= {<CreateQuestion addQuestions={addQuestions} />} 
+          element= {<CreateQuestion 
+            mappedSurveys={mappedSurveys}
+          />} 
         />
         <Route 
           path='/survey/:id' 
-          element={<Survey listQuestions={listQuestions}/>}
+          element={<Survey 
+            mappedSurveys={mappedSurveys}
+          />}
+        />
+        <Route 
+          path='/prueba' 
+          element={<Prueba/>}
         />
         <Route 
           path='*' 
