@@ -7,7 +7,7 @@ import { Home } from './components/Home'
 import { CreateQuestion } from './components/CreateQuestion'
 import { Survey } from './components/Survey'
 import { NotFound } from './components/NotFound'
-import { Prueba } from './components/prueba'
+import { Prueba } from './components/Prueba'
 
 import './App.css'
 

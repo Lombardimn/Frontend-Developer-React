@@ -6,72 +6,98 @@ import { useForm, Controller } from 'react-hook-form'
 //import { useNavigate } from 'react-router-dom'
 
 // eslint-disable-next-line react/prop-types
-export function CreateQuestion({ mappedSurveys }) {
+export function CreateQuestion() {
 
-    const { register, handleSubmit, control, reset, formState: { errors } } = useForm()
+    const { register, handleSubmit, control, reset, setValue, formState: { errors } } = useForm()
     
-    const [listSurveys, setListSurveys] = useState(mappedSurveys)
-    const [numOptions, setNumOptions] = useState('default');
-    const [idList, setIDList] = useState([1])
-    const [currentID, setCurrentID] = useState(2)
+    const [data, setData] = useState({
+        idSurvey: null,
+        title: '',
+        description: '',
+        selectorGrnal: 'default',
+        questions: [],
+        options: [],
+    });
 
-    const [questionList, setQuestionList] = useState([])
-    const [questionCurrent, setQuestionCurrent] = useState([''])
+    const [numOptions, setNumOptions] = useState('default')
+    const [questionCounter, setQuestionCounter] = useState(1)
+    const [optionCounter, setOptionCounter] = useState(0)
 
-    const [data, setData] = useState({ questions: {idQuestion: [], question:[]}, question:'' });
+    //const [listSurveys, setListSurveys] = useState(mappedSurveys)
     //const navigate = useNavigate()
 
-    const onSubmit = handleSubmit((data) => {
-        if (data.question || data.question.trim() === '') {
-            setData({...data, question: data.question})
-        } else {
-            console.log('no esta vacio')
+    const handleChange = () => {       
+        setQuestionCounter(questionCounter + 1)
+        setValue('question', '')
+
+        for (let i = 0; i <= numOptions; i++){
+            setValue(`option${i}`, '')
+        }
+        setNumOptions('default')
+    };
+
+    const onSubmit =  ((formData) => {
+        for(let i = 1; i <= numOptions; i++) {
+            const optionId = formData[`option${i}`]
+            setData((prevData) => ({
+                ...prevData,
+                idSurvey: null,
+                title: formData.title,
+                description: formData.description,
+                selectorGrnal: numOptions,
+                options: [ ...prevData.options, { refQuestion: questionCounter,idOption: i, option: optionId }],
+            }))
         }
 
-        setQuestionCurrent(data.question)
-        setIDList([...idList, currentID])
-        setData({ ...data,  questions: {idQuestion: idList, question: questionList}, selectorGnral: numOptions })
-        
+        for(let i = questionCounter; i <= questionCounter; i++) {
+            setData((prevData) => ({
+                ...prevData,
+                questions: [ ...prevData.questions, { idQuestion: i, question: formData.question }]
+            }))
+        }
+
+        if (numOptions !== 'default') setOptionCounter(optionCounter + Number(numOptions))
+
         //navigate('/')
     })
 
     const handleSelectChange = (e) => {
-        setNumOptions(e.target.value);
-    };
+        setNumOptions(e.target.value)
+    }
 
     const handleReset = () => {
-        reset()
-        setNumOptions('default')
-        setCurrentID(2)
-        setIDList([1])
-        setQuestionList([])
-        setQuestionCurrent([''])
-    }
-
-    const handleModal = () => {
-        setIDList([...idList, currentID])
-        setCurrentID(currentID + 1)
-
-        setQuestionCurrent(data.question)
-        setQuestionList([...questionList, questionCurrent])
+        // Reiniciar el formulario si es necesario.
+        setData({
+            idSurvey: null,
+            title: '',
+            description: '',
+            selectorGrnal: 'default',
+            questions: [],
+            options: [],
+        });
 
         reset()
-        setNumOptions('default')        
+        setNumOptions('default');
+        setQuestionCounter(1);
     }
 
-    console.log('data reset',currentID, idList)
-    console.log('despues',data)
-    console.log('errores', errors)
+    console.log('data',data);
     return (
         <>
-            <h2 className='form-title'>Nueva Encuesta</h2>
-            <form onSubmit={onSubmit}>
-                <div className='form-content'>
+            <h2 className="form-title">Nueva Encuesta</h2>
+            <form onSubmit={handleSubmit(onSubmit)}>
+            <div className='form-content'>
                     <label htmlFor="title">Titulo:</label>
                     <input
                         type="text"
                         id="title"
                         name="title"
+                        onChange={(e) =>{
+                            setData((prevData) => ({
+                                ...prevData,
+                                title: e.target.value
+                            }))
+                        }}     
                         {
                         ...register('title',
                             {
@@ -213,13 +239,17 @@ export function CreateQuestion({ mappedSurveys }) {
                             ))}
                         </>
                     )}
-                    <br />
+                    {
+                        questionCounter === 1
+                            ? <span className='form-span-counter'>0</span>
+                            : <span className='form-span-counter'>{questionCounter - 1}</span>
+                    }
                     <button
                         type='button'
-                        onClick={handleModal}
+                        onClick={handleChange}
                         className='form-newmodal'
                     >
-                        Grabar pregunta
+                        Nueva Pregunta
                     </button>
 
                     <div className='form-button'>
@@ -233,7 +263,7 @@ export function CreateQuestion({ mappedSurveys }) {
                             onClick={handleReset} 
                             className='form-clear'
                         >
-                            Borrar
+                            Cancelar
                         </button>
                     </div>
                 </div>
