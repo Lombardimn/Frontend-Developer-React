@@ -1,10 +1,14 @@
 import { useState } from 'react';
-import '../styles/creactquestion.css'
+import { saveDataJSON } from '../hooks/useCharge';
 import { useForm, Controller } from 'react-hook-form'
 
+import surveys from '../mocks/surveys.json'
+import '../styles/creactquestion.css'
+
+// eslint-disable-next-line react/prop-types
 export function Prueba() {
     const { register, handleSubmit, control, reset, setValue, formState: { errors } } = useForm()
-    
+
     const [data, setData] = useState({
         idSurvey: null,
         title: '',
@@ -18,8 +22,38 @@ export function Prueba() {
     const [questionCounter, setQuestionCounter] = useState(1)
     const [optionCounter, setOptionCounter] = useState(0)
 
+    const listSurveys = surveys
 
-    const handleChange = () => {       
+    const handleChange = ((formData) => {       
+        const objectResult = {
+            idSurvey: null,
+            title: formData.title,
+            description: formData.description,
+            selectorGrnal: numOptions,
+            options: [],
+            questions: [],
+        };
+
+        for(let i = 1; i <= numOptions; i++) {
+            const optionId = formData[`option${i}`]
+            objectResult.options.push({ refQuestion: questionCounter,idOption: i, option: optionId })
+        }
+
+        objectResult.questions.push({ idQuestion: questionCounter, question: formData.question })
+
+        setData((prevData) => ({
+            ...prevData,
+            title: objectResult.title,
+            description: objectResult.description,
+            selectorGrnal: objectResult.selectorGrnal,
+            options: [...prevData.options, ...objectResult.options],
+            questions: [...prevData.questions, ...objectResult.questions],
+        }));
+
+        if (numOptions !== 'default')
+            setOptionCounter(optionCounter + Number(numOptions))
+        
+        // actualizo para la nueva pregunta
         setQuestionCounter(questionCounter + 1)
         setValue('question', '')
 
@@ -27,38 +61,22 @@ export function Prueba() {
             setValue(`option${i}`, '')
         }
         setNumOptions('default')
-    };
+
+    });
 
     const handleSelectChange = (e) => {
         // Actualiza el estado 'numOptions' cuando el usuario selecciona una opción
         setNumOptions(e.target.value);
     };
 
-        const onSubmit =  ((formData) => {
-            for(let i = 1; i <= numOptions; i++) {
-                const optionId = formData[`option${i}`]
-                setData((prevData) => ({
-                    ...prevData,
-                    idSurvey: null,
-                    title: formData.title,
-                    description: formData.description,
-                    selectorGrnal: numOptions,
-                    options: [ ...prevData.options, { refQuestion: questionCounter,idOption: i, option: optionId }],
-                }))
-            }
-
-            for(let i = questionCounter; i <= questionCounter; i++) {
-                setData((prevData) => ({
-                    ...prevData,
-                    questions: [ ...prevData.questions, { idQuestion: i, question: formData.question }]
-                }))
-            }
-
-            if (numOptions !== 'default')
-                setOptionCounter(optionCounter + Number(numOptions))
-                
-
-        });
+    const onSubmit =  () => {
+        if (listSurveys && listSurveys.length) {
+            console.log('datos antes de enviar:', data)
+            saveDataJSON(data, listSurveys);
+        } else {
+            console.error("listSurveys no es un array válido o está vacío.");
+        }
+    };
 
     const handleReset = () => {
         // Reiniciar el formulario si es necesario.
@@ -76,13 +94,14 @@ export function Prueba() {
         setQuestionCounter(1);
     };
 
+    console.log(listSurveys.length)
     console.log(optionCounter)
     console.log('contador:',questionCounter)
     console.log('data',data);
     return (
         <>
             <h2 className="form-title">Nueva Encuesta</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(handleChange)}>
             <div className='form-content'>
                     <label htmlFor="title">Titulo:</label>
                     <input
@@ -239,8 +258,7 @@ export function Prueba() {
                     <br />
                     <span>Contador de preguntas :1</span>
                     <button
-                        type='button'
-                        onClick={handleChange}
+                        type='submit'
                         className='form-newmodal'
                     >
                         Nueva Pregunta
@@ -248,9 +266,10 @@ export function Prueba() {
 
                     <div className='form-button'>
                         <button 
-                            type='submit'
+                            type='button'
+                            onClick={onSubmit}
                         >
-                            Finalizar
+                            Guardar
                         </button>
                         <button 
                             type='button' 

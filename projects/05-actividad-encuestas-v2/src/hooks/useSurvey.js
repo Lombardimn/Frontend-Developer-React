@@ -1,9 +1,25 @@
 import surveys from '../mocks/surveys.json'
 
-export function useSurvey () {
-    const hasSurvey = surveys.length > 0
+export function useSurvey() {    
+    const listSurveys = JSON.parse(localStorage.getItem('listSurveys'));
+    let hasSurvey
+    let mappedSurveys = []
 
-    const  mappedSurveys = surveys.map(survey => ({
+    if (listSurveys === null) {
+        console.log('El elemento "listSurveys" no se encontró en el localStorage.')
+
+        hasSurvey = surveys.length > 0
+        mappedSurveys = mappingData(surveys)
+    } else {
+        hasSurvey = listSurveys.length > 0
+        mappedSurveys = mappingData(listSurveys)
+    }
+
+    return{ mappedSurveys, hasSurvey}
+}
+
+export function mappingData(data) {
+    let mappedSurveys = data.map(survey => ({
         idSurvey: survey.id,
         title: survey.titulo,
         description: survey.descripcion,
@@ -17,5 +33,5 @@ export function useSurvey () {
         }))
     }));
 
-    return {surveys: mappedSurveys, hasSurvey}
+    return mappedSurveys
 }

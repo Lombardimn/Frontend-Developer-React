@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useSurvey } from "./hooks/useSurvey";
 
-
 import { Navbar } from './components/Navbar'
 import { Home } from './components/Home'
 import { CreateQuestion } from './components/CreateQuestion'
@@ -11,40 +10,36 @@ import { Prueba } from './components/Prueba'
 
 import './App.css'
 
-
-
 function App() {
-  const  { surveys: mappedSurveys, hasSurvey } = useSurvey()
+  const { mappedSurveys } = useSurvey()
+
   return (
     <BrowserRouter>
       <Navbar></Navbar>
       <Routes>
         <Route
           path='/'
-          element={<Home 
-            mappedSurveys={mappedSurveys}
-            hasSurvey={hasSurvey} 
-          /> }
+          element={<Home />}
         />
-        <Route 
-          path='/survey/create' 
-          element= {<CreateQuestion 
-            mappedSurveys={mappedSurveys}
-          />} 
-        />
-        <Route 
-          path='/survey/:id' 
-          element={<Survey 
+        <Route
+          path='/survey/create'
+          element={<CreateQuestion
             mappedSurveys={mappedSurveys}
           />}
         />
-        <Route 
-          path='/prueba' 
-          element={<Prueba/>}
+        <Route
+          path='/survey/:id'
+          element={<Survey />}
         />
-        <Route 
-          path='*' 
-          element={<NotFound/>}
+        <Route
+          path='/testing'
+          element={<Prueba
+            mappedSurveys={mappedSurveys}
+          />}
+        />
+        <Route
+          path='/*'
+          element={<NotFound />}
         />
       </Routes>
     </BrowserRouter>

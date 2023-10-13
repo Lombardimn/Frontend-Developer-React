@@ -1,16 +1,18 @@
 import { useParams, Link } from "react-router-dom"
 import { useState } from "react";
+import { useSurvey } from "../hooks/useSurvey";
 
 import '../styles/survey.css'
 
 // eslint-disable-next-line react/prop-types
-export function Survey({ mappedSurveys }) {
+export function Survey() {
     const { id } = useParams();
+    const { mappedSurveys } = useSurvey()
 
+    const survey = Array.isArray(mappedSurveys) 
     // eslint-disable-next-line react/prop-types
-    const survey = mappedSurveys.find(
-        (ques) => ques.idSurvey === parseInt(id)
-    );
+    ? mappedSurveys.find((ques) => ques.idSurvey === parseInt(id)) 
+    : null;
 
     const [selectedColors, setSelectedColors] = useState({})
 
@@ -47,7 +49,7 @@ export function Survey({ mappedSurveys }) {
                     </p>
                 </div>
             </section>
-            <section className="survey-container">
+            <article className="survey-container">
                 <div className="survey-item">
                     <h3 className="survey-subtitle">
                         Preguntas
@@ -55,15 +57,15 @@ export function Survey({ mappedSurveys }) {
                     {
                         !survey.questions
                             ? <p>Sin preguntas</p>
-                            : <div className="survey-content">
+                            : <section className="survey-content">
                                 {
                                     survey.questions.map(
                                         (question) => (
-                                            <>
-                                                <p key={question.idQuestion}>
+                                            <div key={question.idQuestion}>
+                                                <p>
                                                     {question.question}
                                                 </p>
-                                                <ul className="survey-box">
+                                                <ul className="survey-box" key={`ul-${question.idQuestion}`}>
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         width="32"
@@ -96,14 +98,14 @@ export function Survey({ mappedSurveys }) {
                                                         )
                                                     }
                                                 </ul>
-                                            </>
+                                            </div>
                                         )
                                     )
                                 }
-                            </div>
+                            </section>
                     }
                 </div>
-            </section>
+            </article>
         </article>
     )
 }

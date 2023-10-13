@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import { useSurvey } from "../hooks/useSurvey";
 import '../styles/home.css'
 
 // eslint-disable-next-line react/prop-types
-export function Home ({mappedSurveys}, hasSurvey) {
+export function Home () {
+    const { mappedSurveys, hasSurvey } = useSurvey()
+
     return (
         <section>
             <h2>Encuestas Disponibles</h2>
