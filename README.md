@@ -17,32 +17,29 @@ React es una de las bibliotecas más populares para construir interfaces de usua
 
 ### Información General
 
-***
-Este repositorio presenta proyectos prácticos desarrollados en el marco de un curso ofrecido por la UTN-FRC en colaboración con el Gobierno de la provincia de Córdoba. Estos proyectos están diseñados para proporcionar una base sólida en el desarrollo frontend utilizando React, lo que te permitirá adquirir habilidades clave y valiosa experiencia práctica.
+Este repositorio presenta proyectos prácticos desarrollados en el marco de un curso ofrecido por la UTN-FRC en colaboración con la Municipalidad de Córdoba. Estos proyectos están diseñados para proporcionar una base sólida en el desarrollo frontend utilizando React, lo que te permitirá adquirir habilidades clave y valiosa experiencia práctica.
 
 ![Imagen de React](https://upload.wikimedia.org/wikipedia/commons/1/18/React_Native_Logo.png)
 
 ## Tecnologias
 
-***
 Lista de tecnologías utilizadas en el proyecto:
 
 * [React](https://es.react.dev/): Version 18.2.0
 * [Next.js](https://nextjs.org/): Version 13.4.19
 * [Vite.js](https://vitejs.dev/): Version 4.4.5
-* [react-router-dom](https://example.com): Version 18.2.0
-* [react-hook-form](https://example.com): Version 7.47.0
+* [react-router-dom](https://reactrouter.com/en/main): Version 18.2.0
+* [react-hook-form](https://react-hook-form.com/): Version 7.47.0
+* [Boostrap](https://getbootstrap.com/): Version 5.3.0
 
 ## Estructura
 
-***
 La estructura de este repositorio podría clasificarse como un "repositorio monolítico" o "repositorio principal". En este enfoque, todos los proyectos, componentes o recursos relacionados se organizan dentro de una estructura de carpetas única en el mismo repositorio. Esto es común cuando se quiere mantener todos los elementos relacionados a una temática o proyecto en un solo lugar para una gestión más centralizada y un acceso más sencillo.
 
 Sin embargo, es importante mencionar que también es una buena práctica dividir proyectos o componentes en repositorios separados cuando son lo suficientemente grandes o complejos, o cuando se desea gestionarlos de manera independiente. La elección entre un repositorio monolítico y varios repositorios separados depende de las necesidades y preferencias del equipo de desarrollo.
 
 ## Acceso
 
-***
 El repositorio es publico y se puede acceder a el sin limitaciones.
 
 Como recomendacion, luego de descargar los proyectos, si desea ejecutar alguno, instale aglun administrador de paquete en el entorno de desarrollo de JavaScript y Node.js.
@@ -56,9 +53,8 @@ Este paso no es obligatorio, pero puede descomprimir problemas de ejecución.
 
 ## Proyectos
 
-***
 | Número | Proyecto | Código | Web |
-| --- | --- | --- | --- |
+| :---: | :--- | :---: | :---: |
 | `01` | Web personal | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/01-web_personal) | S/D |
 | `02` | Acerca de mí | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/02-acerca_de_mi) | S/D |
 | `03` | Lista de Tareas | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/03-lista_tareas) | S/D |
