@@ -7,7 +7,7 @@ Realizamos el projecto implementando **Boostrap** y **Biblotecas**.
 
 [Profile-react](https://07-profile-react-deploy.netlify.app/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3d3f1433-6e62-402c-b43a-8de301bafac1/deploy-status?branch=dist)](https://app.netlify.com/sites/07-profile-react-deploy/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3d3f1433-6e62-402c-b43a-8de301bafac1/deploy-status)](https://app.netlify.com/sites/07-profile-react-deploy/deploys)
 
 ![portada](./public/portada.png)
 
