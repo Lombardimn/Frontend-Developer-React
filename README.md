@@ -61,7 +61,7 @@ Este paso no es obligatorio, pero puede descomprimir problemas de ejecución.
 | `04` | Encuesta Sencilla | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/04-actividad_encuestas_app) | S/D |
 | `05` | Encuesta Avanzada | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/05-actividad-encuestas-v2) | S/D |
 | `06` | Encuesta con IA | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/06-actividad-encuestas-ia) | S/D |
-| `07` | ... | [ver](https://github.com/Lombardimn/Frontend-Developer-React) | S/D |
+| `07` | Perfil de Usuario | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/07-profile-react-deploy) | S/D |
 | `08` | ... | [ver](https://github.com/Lombardimn/Frontend-Developer-React) | S/D |
 | `09` | ... | [ver](https://github.com/Lombardimn/Frontend-Developer-React) | S/D |
 | `10` | ... | [ver](https://github.com/Lombardimn/Frontend-Developer-React) | S/D |
