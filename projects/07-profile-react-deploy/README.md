@@ -1,7 +1,7 @@
-# 07 - Encuesta Avanzada con IA
+# 07 - Perfil de usuario
 
 ***
-Realizamos el projecto implementando **Boostrap** y **Biblotecas**.
+Desarrollar una aplicación **React** que simule una página de perfil de usuario, utilizando múltiples componentes y navegación con **React Router DOM**. La aplicación debe estar estilizada con **Bootstrap** y finalmente, se desplegará en **Netlify**.
 
 ## Link deploy
 
@@ -13,39 +13,88 @@ Realizamos el projecto implementando **Boostrap** y **Biblotecas**.
 
 ## Objetivo
 
-Construir un formulario de registro simple utilizando React y estilizarlo con Bootstrap.
+Construir un perfil de usuario simple utilizando React y estilizarlo con Bootstrap.
 
 ## Requisitos
 
-* Debes tener instalado create-react-app y react-bootstrap.
-* Crea un nuevo proyecto con create-react-app.
-* Instala react-bootstrap usando npm o yarn.
+### 1. Componentes Principales
+
+* **Encabezado**: Debe contener el nombre de la aplicación y un menú de navegación.
+* **Página Principal (`Home`)**: Una breve introducción o bienvenida al perfil del usuario.
+* **Información Personal (`About`)**: Detalles como nombre, edad, ocupación y una breve biografía.
+* **Hobbies (`Hobbies`)**: Una lista o galería de hobbies o intereses del usuario.
+* **Contacto (`Contact`)**: Un formulario ficticio para contactar al usuario (no es necesario que funcione).
+
+### 2. Navegación
+
+* Implementar React Router DOM para navegar entre los diferentes componentes.
+* El menú en el encabezado debe permitir al usuario cambiar entre las páginas principales, información personal, hobbies y contacto.
+
+### 3. Estilización
+
+* Utilizar Bootstrap para estilizar la aplicación, asegurándose de que sea responsiva.
+
+### 4. Despliegue
+
+* La aplicación debe ser desplegada en Netlify.
 
 ## Instrucciones
 
-Crea un nuevo componente llamado RegistrationForm.
-Dentro de este componente, construye un formulario que solicite:
+### 1. Crear los componentes
 
-* Nombre
-* Apellido
-* Email
-* Contraseña
-* Confirmación de contraseña
-* Un botón para enviar el formulario
+Dentro de la carpeta `src`, crea una carpeta llamada `components`.
 
-Utiliza componentes de react-bootstrap como Form, Button, etc., para estilizar tu formulario.
+* Componente Encabezado (`Header.jsx`)
+* Componente Página Principal (`Home.jsx`)
+* Componente Información Personal (`About.jsx`)
+* Componente Hobbies (`Hobbies.jsx`)
+* Componente Contacto (`Contact.jsx`)
+* Componente Footer (`Footer.jsx`)
+* Archivo `App.js`
 
-Añade una validación simple:
+### 2.Despliegue en Netlify
 
-* Asegúrate de que todos los campos estén llenos antes de enviar.
-* Asegúrate de que la contraseña y la confirmación de contraseña coincidan.
+Netlify es una plataforma de automatización moderna para el desarrollo web que permite desplegar sitios y aplicaciones web de manera rápida y sencilla. Ofrece características como despliegue continuo desde repositorios git, funciones sin servidor, y mucho más.
 
-Cuando el formulario sea válido, muestra un mensaje de éxito al usuario utilizando el componente Alert de Bootstrap.
+Para continuar es necesario crear una cuenta gratuita en [Netlify](https://www.netlify.com/)
 
-## Bonus
+1. Instalar Netlify CLI:
 
-Añade un carrusel de imágenes en la parte superior del formulario utilizando el componente Carousel de Bootstrap. Añade tooltips o popovers de Bootstrap para dar consejos sobre cómo llenar el formulario.
+Abre una terminal en la carpeta raíz de tu proyecto y ejecuta el siguiente comando para instalar la herramienta netlify-cli, que facilitará el despliegue en Netlify:
 
-## Conclusión
+```bash
+npm install netlify-cli -g
+```
 
-Este ejercicio permite a los estudiantes practicar la integración de Bootstrap con React, la creación de formularios y la validación básica de formularios en React. Es lo suficientemente simple como para ser completado en una clase, pero también ofrece oportunidades para extender y personalizar según el nivel de habilidad de los estudiantes.
+2. Modificar scripts en `package.json`:
+
+En package.json, modifica la sección de scripts para actualizar la variable PUBLIC_URL:
+
+```json
+"scripts": {
+    "build": "PUBLIC_URL= react-scripts build",
+    // ...otros comandos...
+}
+```
+
+3. Ejecuta el despliegue:
+
+Ahora puedes ejecutar el comando para desplegar tu aplicación en Netlify:
+
+```bash
+npm run build
+
+netlify deploy
+```
+
+Seguir las instrucciones y indicar la carpeta `./build` como fuente para desplegar el sitio. Esto construirá la aplicación y la desplegará.
+
+4. Accede a tu aplicación desplegada:
+
+Una vez que el proceso de despliegue haya finalizado sin errores, puedes acceder a tu aplicación en la URL que indica en el resultado.
+
+5. Actualiza y comparte:
+
+Cada vez que realices cambios en tu aplicación, repite el paso 3 para actualizar la versión desplegada en Netlify.
+
+¡Eso es todo! Tu aplicación React debería estar ahora desplegada en Netlify y accesible en línea.
