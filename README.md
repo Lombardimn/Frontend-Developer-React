@@ -63,6 +63,6 @@ Este paso no es obligatorio, pero puede descomprimir problemas de ejecución.
 | `06` | Encuesta con IA | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/06-actividad-encuestas-ia) | [ver](https://06-actividad-encuestas-ia.netlify.app) |
 | `07` | Perfil de Usuario | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/07-profile-react-deploy) | [ver](https://07-profile-react-deploy.netlify.app) |
 | `07B` | Formulario de Registro | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/07b-registration-form) | S/D |
-| `08` | ... | [ver](https://github.com/Lombardimn/Frontend-Developer-React) | S/D |
+| `08` | Autenticación App React | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/08-activity-react-safety) | S/D |
 | `09` | ... | [ver](https://github.com/Lombardimn/Frontend-Developer-React) | S/D |
 | `10` | ... | [ver](https://github.com/Lombardimn/Frontend-Developer-React) | S/D |
