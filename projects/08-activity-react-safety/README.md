@@ -1,4 +1,4 @@
-# 07B - Formulario de Registro
+# 08 - Auntenticación React App
 
 ***
 Autenticación y Autorización con **React** y **Auth0**.
@@ -410,8 +410,8 @@ export default App;
 Para hacer pruebas con un usuario pueden usar los siguientes datos:
 
 ```shell
-usr: ruben@example.com
-pss: desaFrontend2023
+usr: mlombardi@example.com
+pss: UsdG@f-8qvQLsW$
 ```
 
 ### **Etapa 7: Entrega**
