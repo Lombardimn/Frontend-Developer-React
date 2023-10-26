@@ -31,6 +31,7 @@ Lista de tecnologías utilizadas en el proyecto:
 * [react-router-dom](https://reactrouter.com/en/main): Version 18.2.0
 * [react-hook-form](https://react-hook-form.com/): Version 7.47.0
 * [Boostrap](https://getbootstrap.com/): Version 5.3.0
+* [Aut0](https://auth0.com/): Version 2.2.1
 
 ## Estructura
 
@@ -58,7 +59,7 @@ Este paso no es obligatorio, pero puede descomprimir problemas de ejecución.
 | `01` | Web personal | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/01-web_personal) | [ver](https://01-web-personal.netlify.app) |
 | `02` | Acerca de mí | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/02-acerca_de_mi) | [ver](https://02-acerca-de-mi.netlify.app) |
 | `03` | Lista de Tareas | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/03-lista_tareas) | [ver](https://03-lista-tareas.netlify.app) |
-| `04` | Encuesta Sencilla | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/04-actividad_encuestas_app) | S/D |
+| `04` | Encuesta Sencilla | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/04-actividad_encuesta_app) | S/D |
 | `05` | Encuesta Avanzada | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/05-actividad-encuestas-v2) | [ver](https://05-actividad-encuestas-v2.netlify.app) |
 | `06` | Encuesta con IA | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/06-actividad-encuestas-ia) | [ver](https://06-actividad-encuestas-ia.netlify.app) |
 | `07` | Perfil de Usuario | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/07-profile-react-deploy) | [ver](https://07-profile-react-deploy.netlify.app) |
