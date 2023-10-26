@@ -1,9 +1,10 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { Auth0Provider } from '@auth0/auth0-react';
+import config from './utils/config.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/Animation.css'
-import config from './utils/config.js'
+
 
 
 const domainKey = config.VITE_REACT_APP_DOMAIN;
