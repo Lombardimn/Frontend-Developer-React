@@ -404,6 +404,12 @@ export default App;
 
 ### **Etapa 6: Pruebas**
 
+```markdown
+  **¡Aviso importante!**
+
+Los parámetros DOMAIN y CLIENTID, por cuestiones de seguridad, se encuentran disponibles solo a nivel local. Por lo tanto, deberán configurar sus propios parámetros para el correcto funcionamiento de la aplicación.
+```
+
 * Prueba todas las funcionalidades de tu aplicación: registro, inicio de sesión y acceso al perfil.
 * Reflexiona sobre las ventajas de utilizar un servicio como Auth0 para la autenticación y autorización en aplicaciones web.
 
