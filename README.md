@@ -59,11 +59,11 @@ Este paso no es obligatorio, pero puede descomprimir problemas de ejecución.
 | `01` | Web personal | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/01-web_personal) | [ver](https://01-web-personal.netlify.app) |
 | `02` | Acerca de mí | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/02-acerca_de_mi) | [ver](https://02-acerca-de-mi.netlify.app) |
 | `03` | Lista de Tareas | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/03-lista_tareas) | [ver](https://03-lista-tareas.netlify.app) |
-| `04` | Encuesta Sencilla | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/04-actividad_encuestas_app) | S/D |
+| `04` | Encuesta Sencilla | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/04-actividad_encuestas_app) | [ver](https://04-actividad-encuestas-app.netlify.app) |
 | `05` | Encuesta Avanzada | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/05-actividad-encuestas-v2) | [ver](https://05-actividad-encuestas-v2.netlify.app) |
 | `06` | Encuesta con IA | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/06-actividad-encuestas-ia) | [ver](https://06-actividad-encuestas-ia.netlify.app) |
 | `07` | Perfil de Usuario | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/07-profile-react-deploy) | [ver](https://07-profile-react-deploy.netlify.app) |
 | `07B` | Formulario de Registro | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/07b-registration-form) | S/D |
 | `08` | Autenticación App React | [ver](https://github.com/Lombardimn/Frontend-Developer-React/tree/main/projects/08-activity-react-safety) | S/D |
-| `09` | ... | [ver](https://github.com/Lombardimn/Frontend-Developer-React) | S/D |
-| `10` | ... | [ver](https://github.com/Lombardimn/Frontend-Developer-React) | S/D |
+| `09` | ... | S/A | S/D |
+| `10` | ... | [ver](https://github.com/Lombardimn/Frontend-Developer-React/10-react-product-management) | S/D |
